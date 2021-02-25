@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Quiz</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("1block").style.display = "none";
+        document.getElementById("2block").style.display = "none";
+        document.getElementById("3block").style.display = "none";
+      });
+      function vaiGo() {
+        document.getElementById("1block").style.display = "block";
+        document.getElementById("vai").style.display = "none";
+        document.getElementById("question").style.display = "none";
+      }
+      function replyOne() {
+        alert("Sei Harry Potter");
+      }
+
+      function replyTwo() {
+        alert("Sei Ron Weasley");
+      }
+
+      function replyThree() {
+        alert("Sei Hermione");
+      }
+
+      function nextQuestion() {
+        document.getElementById("1block").style.display = "none";
+        document.getElementById("2block").style.display = "block";
+      }
+
+      function nextQuestion2() {
+        document.getElementById("2block").style.display = "none";
+        document.getElementById("3block").style.display = "block";
+      }
+
+      function fin() {
+        alert("Sei un gufo");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="brd">
+      <h1 id="question">Quale personaggio di Harry Potter sei?</h1>
+      <button id="vai" type="button" onclick="vaiGo()">VAI!</button>
+      <div id="1block">
+        <h2>Hai una cicatrice sulla fronte?</h2>
+        <button type="button" onclick="replyOne()">SI</button>
+        <button type="button" onclick="nextQuestion();">NO</button>
+      </div>
+      <div id="2block">
+        <h2>Hai 5 fratelli?</h2>
+        <button type="button" onclick="replyTwo()">SI</button>
+        <button type="button" onclick="nextQuestion2();">NO</button>
+      </div>
+      <div id="3block">
+        <h2>Sei una sapientina?</h2>
+        <button type="button" onclick="replyThree()">SI</button>
+        <button type="button" onclick="fin();">NO</button>
+      </div>
+    </div>
+  </body>
+</html>
